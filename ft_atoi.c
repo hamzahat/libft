@@ -6,7 +6,7 @@
 /*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 02:15:01 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/22 18:05:44 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:47:26 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign = -sign;
+			sign *= -1;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')

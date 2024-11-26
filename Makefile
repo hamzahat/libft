@@ -6,7 +6,7 @@
 #    By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 16:47:44 by hbenmoha          #+#    #+#              #
-#    Updated: 2024/11/26 09:57:13 by hbenmoha         ###   ########.fr        #
+#    Updated: 2024/11/26 15:52:31 by hbenmoha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
