@@ -6,7 +6,7 @@
 /*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 02:15:01 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/22 14:11:36 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2024/11/22 18:05:44 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(num * sign));
 }
-

@@ -6,7 +6,7 @@
 /*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:45:06 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/21 19:01:04 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2024/11/22 19:22:47 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (dst);
 	take_dst = (unsigned char *)dst;
 	take_src = (const unsigned char *)src;
-	while (n-- > 0)
+	while (n--)
 		*(take_dst++) = *(take_src++);
 	return (dst);
 }
