@@ -6,7 +6,7 @@
 /*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:16:57 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/21 20:13:38 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:05:28 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	int		i;
 
 	l_src = ft_strlen(src);
+	if (!dst && dsize == 0)
+		return (l_src);
 	l_dst = ft_strlen(dst);
 	if (dsize <= l_dst)
 		return (l_src + dsize);

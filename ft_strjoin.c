@@ -6,7 +6,7 @@
 /*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 09:49:59 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/21 20:12:10 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:17:59 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	int		i;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	if (!s1)
+		return ((char *)(s2));
+	if (!s2)
+		return ((char *)(s1));
 	j = 0;
 	i = 0;
 	str = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));

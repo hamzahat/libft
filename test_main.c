@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <libc.h>
 
-// ft_isalpha:
+// ft_isalpha:  
 // int main (void)
 // {
 //     printf("%d\n",ft_isalpha('c'));
@@ -96,44 +97,45 @@
 // ft_memcpy
 // int main(void)
 // {
-//     char dst[10] = "";
+//     char dst[10] = "hamza_hat";
 //     char src[] = "hamza_hat";
-//     char *r = ft_memcpy(dst,src,9);
-//     printf("%s\n",src);
-//     printf("%s\n",r);
+//     char *res = memcpy(dst,src,10);
+//     char *r = ft_memcpy(dst,src,10);
+//     printf("orginnal:%s\n",res);
+//     printf("fvictime:%s\n",r);
+//     printf("dstination:%s\n",dst);
 // }
 
 
 // ft_memmove
 // int main(void)
 // {
-//     char dst[10];
+//     char dst[10] = "hamza_hat";
 //     char src[] = "hamza_hat";
 //     char *result = ft_memmove(dst,src,9);
-//     printf("%s\n",result);
-//     printf("%s\n",dst);
-//     printf("%s\n",src);
+//     char *r = memmove(dst,src,9);
+//     printf("fvictime:%s\n",result);
+//     printf("origine:%s\n",r);
+//     printf("dst:%s\n",dst);
 // }
 
 
 // ft_strlcpy
 // int main(void)
 // {
-//     char *src = "hamza_hat";
-//     char dst[10];
+//     char dst[10] = "hamza";
+//     char *src = NULL;
 //     printf("%zu\n",ft_strlcpy(dst,src,sizeof(dst)));
-//     printf("%zu\n",sizeof(dst));
+//     printf("%zu\n",strlcpy(dst,src,sizeof(dst)));
 // }
 
 
 // ft_strlcat
 // int main (void)
 // {
-//     char dst[10] = "hamza";
-//     char *src = "_hathhhhhhhhhhhhh";
-//     printf("%zu\n",ft_strlcat(dst,src,sizeof(dst)));
-//     printf("%zu\n",sizeof(dst));
-//     printf("%s\n",dst);
+//     char *src = "_hat";
+//     printf("%zu\n",ft_strlcat(NULL,src,5));
+//     printf("%zu\n",strlcat(NULL,src,5));
 // }
 
 
@@ -188,14 +190,14 @@
 // ft_strncmp
 // int main (void)
 // {
-// // there is deferent
-//     char *s1 = "hamza_haT";
-//     char *s2 = "hamza_hat";
-//     printf("%d\n",ft_strncmp(s1,s2,9));
-// // there is no deferent
-//     char *str1 = "hamza_hat";
-//     char *str2 = "hamza_hat";
-//     printf("%d\n",ft_strncmp(str1,str2,9));
+// there is deferent
+    // char *str1 = "hamza_hat\200";
+    // char *str2 = "hamza_hat\0";
+    // printf("%d\n",ft_strncmp(str1,str2,10));
+// there is no deferent
+    // char *s1 = "hamza_haT";
+    // char *s2 = "hamza_hat";
+    // printf("%d\n",ft_strncmp(s1,s2,9));
 // }
 
 
@@ -222,24 +224,22 @@
 // ft_strnstr
 // int main (void)
 // {
-//     char *src = "hamza_hat";
+//     // char *src = "hamza_hat";
 //     char *dst = "hat";
-//     printf("%s\n",ft_strnstr(src,dst,10));
+//     printf("%s\n",ft_strnstr(NULL,dst,0));
+//     // printf("%s\n",strnstr(NULL,dst,0));
 // }
 
+
 // ft_atoi
-// void leaks()
-// {
-//     system("leaks a.out");
-// }
 // #include <stdlib.h>
 // int main (void)
 // {
-//     atexit(leaks); // do not remove
-//     printf("mine %d\n", ft_atoi("++2147483648"));
-//     printf("original %d\n", atoi("++2147483648"));
+//     printf("mine %d\n", ft_atoi("	 +2147483648"));
+//     printf("original %d\n", atoi("	 +2147483648"));
 //     return (0);
 // }
+
 
 // ft_atoi
 // int main (void)
@@ -286,14 +286,17 @@
 // ft_strjoin
 // int main (void)
 // {
-//     char *s1 = "hamza_";
-//     char *s2 = "hat";
-//     char *res= ft_strjoin(s1,s2);
+//     // char *s1 = "hamza_";
+//     // char *s2 = "hat";
+//     char *res= ft_strjoin(NULL,NULL);
 //     if (!res)
+//     {
+//         printf("error");
 //         return 1;
+//     }
 //     printf("%s\n",res);
-//     free(res);
-//     res = NULL;
+//     // free(res);
+//     // res = NULL;
 // }
 
 
@@ -404,3 +407,22 @@
 //     ft_putnbr_fd(123,1);
 // }
 
+
+// how to test leaks memory
+// void leaks(void)
+// {
+//     system("leaks a.out");
+// }
+// void fun (void)
+// {
+//     atexit(leaks);
+// }
+
+
+// int main (void)
+// {
+//     int i = 1;
+//     char *p = (char *)&i;
+//     ft_bzero(p,4);
+//     printf("%d\n",i);
+// }
