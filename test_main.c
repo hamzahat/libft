@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <libc.h>
+// #include <libc.h>
 
 // ft_isalpha:  
 // int main (void)
@@ -425,4 +425,18 @@
 //     char *p = (char *)&i;
 //     ft_bzero(p,4);
 //     printf("%d\n",i);
+// }
+
+
+// int main (void)
+// {
+// 	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // 10 index 
+// 	int high = sizeof(arr) / sizeof(arr[0]);
+// 	int key = 11;
+// 	int *result = int_arr_binarySearch(arr, 0, high -1, key);
+// 	if (result)
+// 		printf ("the element found %d\n", *result);
+// 	else
+// 		printf("not found\n");
+// 	return (0);
 // }

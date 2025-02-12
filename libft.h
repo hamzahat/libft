@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hamza_hat <hamza_hat@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 19:39:35 by hbenmoha          #+#    #+#             */
-/*   Updated: 2024/11/21 18:12:48 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:16:40 by hamza_hat        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
+# include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -50,5 +52,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
+int		*int_arr_search(int *arr, int size, int nb);
+int		*int_arr_binarySearch(int *arr, int low, int high, int key);
 
 #endif
