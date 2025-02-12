@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_binary_Search.c                                 :+:      :+:    :+:   */
+/*   ft_linear_Search.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamza_hat <hamza_hat@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 15:32:45 by hamza_hat         #+#    #+#             */
-/*   Updated: 2025/02/12 15:45:30 by hamza_hat        ###   ########.fr       */
+/*   Created: 2025/02/12 15:45:05 by hamza_hat         #+#    #+#             */
+/*   Updated: 2025/02/12 15:45:22 by hamza_hat        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int *int_arr_binarySearch(int *arr, int low, int high, int key)
+int *int_arr_search(int *arr, int size, int nb)
 {
-	while (low <= high)
+	if (!arr)
+		return (NULL);
+	int i = 0;
+	while (i < size)
 	{
-		int	mid;
-
-		mid = low + (high - low) / 2;
-		if (arr[mid] == key)
-			return (&arr[mid]);
-		else if (arr[mid] < key)
-			low = mid + 1;
-		else
-			high = mid - 1;
+		if (arr[i] == nb)
+			return (&arr[i]);
+		i++;
 	}
 	return (NULL);
 }
