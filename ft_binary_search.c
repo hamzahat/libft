@@ -6,7 +6,7 @@
 /*   By: hamza_hat <hamza_hat@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:32:45 by hamza_hat         #+#    #+#             */
-/*   Updated: 2025/02/12 15:45:30 by hamza_hat        ###   ########.fr       */
+/*   Updated: 2025/02/13 09:45:49 by hamza_hat        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int *int_arr_binarySearch(int *arr, int low, int high, int key)
 	{
 		int	mid;
 
-		mid = low + (high - low) / 2;
+		mid = ((unsigned int)low + (unsigned int)high) >> 1;
 		if (arr[mid] == key)
 			return (&arr[mid]);
 		else if (arr[mid] < key)
