@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hamza_hat <hamza_hat@student.42.fr>        +#+  +:+       +#+        */
+/*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 19:39:35 by hbenmoha          #+#    #+#             */
-/*   Updated: 2025/02/12 15:16:40 by hamza_hat        ###   ########.fr       */
+/*   Updated: 2025/02/23 11:32:05 by hbenmoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,12 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_swap(int *a, int *b);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
 int		*int_arr_search(int *arr, int size, int nb);
-int		*int_arr_binarySearch(int *arr, int low, int high, int key);
+int		*int_arr_binary_search(int *arr, int low, int high, int key);
 
 #endif
